@@ -30,21 +30,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
 
-<h2>Login</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<?php if (isset($error)) : ?>
-    <p style="color:red;"><?php echo $error; ?></p>
-<?php endif; ?>
+<div class="container">
+    <h2>Form Login</h2>
+    
+    <form method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        
+        <button type="submit">Login</button>
+        <button type="reset">Batal</button>
+    </form>
+</div>
 
-<form method="POST">
-    <label>Username:</label><br>
-    <input type="text" name="username"><br><br>
-
-    <label>Password:</label><br>
-    <input type="password" name="password"><br><br>
-
-    <button type="submit">Login</button>
-</form>
-
+</body>
+</html>
 </body>
 </html>
