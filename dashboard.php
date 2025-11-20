@@ -7,20 +7,16 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dashboard</title>
-</head>
-<body>
+<link rel="stylesheet" href="style.css">
 
-<?php
-    echo "<h2>Selamat datang, " . $_SESSION['username'] . "!</h2>";
-?>
+<div class="dashboard-box">
+    <h2>Selamat datang, <?php echo $_SESSION['username']; ?>!</h2>
+    <p>Role: <?php echo $_SESSION['role']; ?></p>
 
-<p>Role: <?php echo $_SESSION['role']; ?></p>
-
-<a href="logout.php">Logout</a>
+    <a href="logout.php">
+        <button>Logout</button>
+    </a>
+</div>
 
 </body>
 </html>
